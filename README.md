@@ -1,23 +1,23 @@
 # remove-similar-looking-images<br />
 This repository contains a program designed to preprocess a dataset of parking garage images captured by surveillance cameras. The program aims to clean, standardize, and remove similar-looking images from the dataset to ensure its suitability for training deep learning models.
 
-### Q1. What did you learn after looking at our dataset? <br />
+## Q1. What did you learn after looking at our dataset? <br />
 The dataset comprises parking garage images captured by surveillance cameras, totaling 1080 images.
-### Q2. How does your program work? <br />
-Step 1: The program examines the available file extensions within the dataset. It helps us to know what kind of dataset we are dealing with.
+## Q2. How does your program work? <br />
+### Step 1: The program examines the available file extensions within the dataset. It helps us to know what kind of dataset we are dealing with.
 
-Step 2: It determines the total number of images present in the dataset.
+### Step 2: It determines the total number of images present in the dataset.
 
-Step 3: The program identifies and eliminates any none or empty image files, if they exist, from the dataset.
+### Step 3: The program identifies and eliminates any none or empty image files, if they exist, from the dataset.
 
-None type image - When loading or accessing an image that doesn't exist or cannot be read properly, the image variable may be assigned the value "None" to indicate the absence of valid image data. 
+None type image - When loading or accessing an image that doesn't exist or cannot be read properly, the image variable may be assigned the value "None" to indicate the absence of valid image data. <br />
 Empty image - An "empty" image refers to an image object that exists but contains no meaningful data or has dimensions of zero.
 
-Step 4: After the removal process, it reevaluates the number of images remaining in the dataset.
+### Step 4: After the removal process, it reevaluates the number of images remaining in the dataset.
 
-Step 5: Next, the program resizes the dataset to a standardized 224 x 224 dimensions. This step is crucial for ensuring consistent data and meets the requirements of deep learning models. Many neural networks expect square-shaped input images, and 224x224 is a commonly accepted size for various deep learning models. This choice of size is made considering the model the dataset will be trained on; it may vary based on the specific model being used.
+### Step 5: Next, the program resizes the dataset to a standardized 224 x 224 dimensions. This step is crucial for ensuring consistent data and meets the requirements of deep learning models. Many neural networks expect square-shaped input images, and 224x224 is a commonly accepted size for various deep learning models. This choice of size is made considering the model the dataset will be trained on; it may vary based on the specific model being used.
 
-Step 6: The program aims to detect and remove similar-looking images from the dataset. It accomplishes this through the following steps:
+### Step 6: The program aims to detect and remove similar-looking images from the dataset. It accomplishes this through the following steps:
 
 The program starts by comparing the first image with all the other images in the dataset to check for similarity. If any similar-looking images are found, they are added to a list for deletion at the end.
 
