@@ -1,4 +1,5 @@
-# remove-similar-looking-images
+# remove-similar-looking-images<br />
+This repository contains a program designed to preprocess a dataset of parking garage images captured by surveillance cameras. The program aims to clean, standardize, and remove similar-looking images from the dataset to ensure its suitability for training deep learning models.
 
 ### Q1. What did you learn after looking at our dataset? <br />
 The dataset comprises parking garage images captured by surveillance cameras, totaling 1080 images.
