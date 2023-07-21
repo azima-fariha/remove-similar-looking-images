@@ -39,7 +39,7 @@ Upon completion of the similarity-looking images removal process, the program di
 For my remove_similar_images function, I opted to utilize the following input parameters:
 
 1. **folder_path** - This parameter allows me to provide the path to the dataset.
-2. **min_contour_area** - The input parameter "min_contour_area" plays a crucial role in calculating the similarity score within the compare_frames_change_detection function. Therefore, setting an appropriate minimum contour area is of utmost importance. It's essential to strike a balance, avoiding setting min_contour_area too small, as it may include image noises, or too large, leading to the exclusion of significant contours.
+2. **min_contour_area** - The input parameter "min_contour_area" plays a crucial role in calculating the similarity score within the `compare_frames_change_detection` function. Therefore, setting an appropriate minimum contour area is of utmost importance. It's essential to strike a balance, avoiding setting min_contour_area too small, as it may include image noises, or too large, leading to the exclusion of significant contours.
 
 To identify a suitable min_contour_area for the dataset, I conducted an analysis of contour areas from various images. In one of the experiments, the contour areas were as follows:
 
