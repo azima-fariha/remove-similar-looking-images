@@ -4,25 +4,25 @@ This repository contains a program designed to preprocess a dataset of parking g
 ## Q1. What did you learn after looking at our dataset? <br />
 The dataset comprises parking garage images captured by surveillance cameras, totaling 1080 images.
 ## Q2. How does your program work? <br />
-### Step 1
+### Step 1:
 The program examines the available file extensions within the dataset. It helps us to know what kind of dataset we are dealing with.
 
-### Step 2
+### Step 2:
 It determines the total number of images present in the dataset.
 
-### Step 3
+### Step 3:
 The program identifies and eliminates any none or empty image files, if they exist, from the dataset.
 
-None type image - When loading or accessing an image that doesn't exist or cannot be read properly, the image variable may be assigned the value "None" to indicate the absence of valid image data. <br />
-Empty image - An "empty" image refers to an image object that exists but contains no meaningful data or has dimensions of zero.
+* None type image - When loading or accessing an image that doesn't exist or cannot be read properly, the image variable may be assigned the value "None" to indicate the absence of valid image data. <br />
+* Empty image - An "empty" image refers to an image object that exists but contains no meaningful data or has dimensions of zero.
 
-### Step 4
+### Step 4:
 After the removal process, it reevaluates the number of images remaining in the dataset.
 
-### Step 5
+### Step 5:
 Next, the program resizes the dataset to a standardized 224 x 224 dimensions. This step is crucial for ensuring consistent data and meets the requirements of deep learning models. Many neural networks expect square-shaped input images, and 224x224 is a commonly accepted size for various deep learning models. This choice of size is made considering the model the dataset will be trained on; it may vary based on the specific model being used.
 
-### Step 6
+### Step 6:
 The program aims to detect and remove similar-looking images from the dataset. It accomplishes this through the following steps:
 
 The program starts by comparing the first image with all the other images in the dataset to check for similarity. If any similar-looking images are found, they are added to a list for deletion at the end.
@@ -31,7 +31,7 @@ After analyzing the first image, the program proceeds to compare the second imag
 
 This process continues for each subsequent image in the dataset, comparing it with the remaining images to identify and compile a list of similar-looking images for removal.
 
-### Step 7
+### Step 7:
 Upon completion of the similarity-looking images removal process, the program displays the number of remaining images in the dataset.
 
 ### Q3. What values did you decide to use for input parameters and how did you find these values?<br />
