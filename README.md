@@ -69,7 +69,7 @@ From the example above, it was evident that any contour with an area less than 8
 3. **similarity_threshold** - In the `compare_frames_change_detection` function, we obtain a similarity score for two images. To determine if the images are considered similar, we establish a `similarity_threshold`, which indicates the score, below which the images are deemed similar. To achieve this, we pass the `similarity_threshold` as an input parameter to the `remove_similar_images` function.
 To identify an appropriate threshold for the dataset, I experimented with various thresholds. For instance, setting `similarity_threshold` to 1500 and `min_contour_area` to 300 resulted in the following two images being predicted as similar.
 
-<p float="left">
+<p float="left" , align="center">
   <img src="./diagrams/c19.png" width="45%" />
   <img src="./diagrams/c20.png" width="45%" /> 
 </p>
@@ -77,7 +77,7 @@ To identify an appropriate threshold for the dataset, I experimented with variou
 However, upon inspection, I observed that the images had a score of 553.0, but there was a significant difference between them. The left image contained a car that was absent in the right image. This difference is crucial, depending on the specific use case. Since our `similarity_threshold` is 1500 and the score is 553, the model erroneously assumed the images to be similar. To rectify this, it became necessary to reduce the `similarity_threshold`.<br />
 To address this, I reduced both `similarity_threshold` to 500 and `min_contour_area` to 100 and conducted the experiment on another pair of images. As a result, the score was 406.0, and the two images below were concluded to be similar. However, as evident in the right image, there are more cars present that do not exist in the left image, making them dissimilar.<br />
 
- <p float="left">
+ <p float="left" , align="center">
   <img src="./diagrams/c27.png" width="45%" />
   <img src="./diagrams/c29.png" width="45%" /> 
 </p>
