@@ -62,3 +62,23 @@ Ultimately, I set min_contour_area to 95, as it was determined to strike the rig
 
 3. similarity_threshold - In the compare_frames_change_detection function, we obtain a similarity score for two images. To determine if the images are considered similar, we establish a similarity_threshold, which indicates the score below which the images are deemed similar. To achieve this, we pass the similarity_score as an input parameter to the remove_similar_images function.
 To identify an appropriate threshold for the dataset, I experimented with various thresholds. For instance, setting similarity_threshold to 1500 and min_contour_area to 300 resulted in the following two images being predicted as similar.
+
+image image 
+
+However, upon inspection, I observed that the images had a score of 553.0, but there was a significant difference between them. The left image contained a car that was absent in the right image. This difference is crucial, depending on the specific use case. Since our similarity_threshold is 1500 and the score is 553, the model erroneously assumed the images to be similar. To rectify this, it became necessary to reduce the similarity_threshold.
+
+To address this, I reduced both similarity_threshold to 500 and min_contour_area to 100. As a result, the score was 406.0, and the two images below were concluded to be similar. However, as evident in the right image, there are more cars present that do not exist in the left image, making them dissimilar.
+
+After analyzing carefully, I eventually set the similarity_threshold to 150, aiming for more accurate results and better handling of image similarities.
+ image image 
+
+This iterative process involved experimenting with various images to determine suitable values for both the similarity_threshold and min_contour_area, ultimately ensuring accurate results for the dataset.
+
+## Q4. What would you suggest to implement to improve data collection of unique cases in the future?
+Regular Data Cleanup: Perform regular data cleanup by running algorithms to detect and remove duplicated or highly similar images or data points. This helps maintain a clean and relevant dataset.
+## Q5. Any other comments about your solution?
+The effectiveness of the solution heavily relies on the specific use case and the overall size of the dataset. When training a deep neural network, having a large number of images is advantageous. However, it is crucial to consider the potential risks involved in removing similar images, especially if important images may be mistakenly eliminated.
+
+To address these concerns, it becomes essential to carefully determine the appropriate values for similarity_threshold and min_contour_area. This thoughtful selection ensures that the removal process strikes the right balance between eliminating redundant data and retaining valuable images for accurate and reliable model training.
+
+
