@@ -38,7 +38,7 @@ Upon completion of the similarity-looking images removal process, the program di
 
 For my remove_similar_images function, I opted to utilize the following input parameters:
 
-1. folder_path - This parameter allows me to provide the path to the dataset.
+1. ** folder_path ** - This parameter allows me to provide the path to the dataset.
 2. min_contour_area - The input parameter "min_contour_area" plays a crucial role in calculating the similarity score within the compare_frames_change_detection function. Therefore, setting an appropriate minimum contour area is of utmost importance. It's essential to strike a balance, avoiding setting min_contour_area too small, as it may include image noises, or too large, leading to the exclusion of significant contours.
 
 To identify a suitable min_contour_area for the dataset, I conducted an analysis of contour areas from various images. In one of the experiments, the contour areas were as follows:
@@ -65,10 +65,8 @@ To identify an appropriate threshold for the dataset, I experimented with variou
 
 image image 
 
-However, upon inspection, I observed that the images had a score of 553.0, but there was a significant difference between them. The left image contained a car that was absent in the right image. This difference is crucial, depending on the specific use case. Since our similarity_threshold is 1500 and the score is 553, the model erroneously assumed the images to be similar. To rectify this, it became necessary to reduce the similarity_threshold.
-
-To address this, I reduced both similarity_threshold to 500 and min_contour_area to 100. As a result, the score was 406.0, and the two images below were concluded to be similar. However, as evident in the right image, there are more cars present that do not exist in the left image, making them dissimilar.
-
+However, upon inspection, I observed that the images had a score of 553.0, but there was a significant difference between them. The left image contained a car that was absent in the right image. This difference is crucial, depending on the specific use case. Since our similarity_threshold is 1500 and the score is 553, the model erroneously assumed the images to be similar. To rectify this, it became necessary to reduce the similarity_threshold.<br />
+To address this, I reduced both similarity_threshold to 500 and min_contour_area to 100. As a result, the score was 406.0, and the two images below were concluded to be similar. However, as evident in the right image, there are more cars present that do not exist in the left image, making them dissimilar.<br />
 After analyzing carefully, I eventually set the similarity_threshold to 150, aiming for more accurate results and better handling of image similarities.
  image image 
 
