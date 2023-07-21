@@ -41,7 +41,7 @@ For my `remove_similar_images` function, I opted to utilize the following input 
 1. **folder_path** - This parameter allows me to provide the path to the dataset.
 2. **min_contour_area** - The input parameter `min_contour_area` plays a crucial role in calculating the similarity score within the `compare_frames_change_detection` function. Therefore, setting an appropriate minimum contour area is of utmost importance. It's essential to strike a balance, avoiding setting `min_contour_area` too small, as it may include image noises, or too large, leading to the exclusion of significant contours.
 
-To identify a suitable min_contour_area for the dataset, I conducted an analysis of contour areas from various images. In one of the experiments, the contour areas were as follows:
+To identify a suitable `min_contour_area` for the dataset, I conducted an analysis of contour areas from various images. In one of the experiments, the contour areas were as follows:
 
 contour area: 32.0
 contour area: 32.0
@@ -67,10 +67,11 @@ image image
 
 However, upon inspection, I observed that the images had a score of 553.0, but there was a significant difference between them. The left image contained a car that was absent in the right image. This difference is crucial, depending on the specific use case. Since our `similarity_threshold` is 1500 and the score is 553, the model erroneously assumed the images to be similar. To rectify this, it became necessary to reduce the `similarity_threshold`.<br />
 To address this, I reduced both `similarity_threshold` to 500 and `min_contour_area` to 100. As a result, the score was 406.0, and the two images below were concluded to be similar. However, as evident in the right image, there are more cars present that do not exist in the left image, making them dissimilar.<br />
-After analyzing carefully, I eventually set the `similarity_threshold` to 150, aiming for more accurate results and better handling of image similarities.
+
  image image 
 
-This iterative process involved experimenting with various images to determine suitable values for both the `similarity_threshold` and `min_contour_area`, ultimately ensuring accurate results for the dataset.
+This iterative process involved experimenting with various images to determine suitable values for both the `similarity_threshold` and `min_contour_area`, ultimately ensuring accurate results for the dataset.<br />
+After analyzing carefully, I eventually set the `similarity_threshold` to 150, aiming for more accurate results and better handling of image similarities.
 
 ## Q4. What would you suggest to implement to improve data collection of unique cases in the future?
 Regular Data Cleanup: Perform regular data cleanup by running algorithms to detect and remove duplicated or highly similar images or data points. This helps maintain a clean and relevant dataset.
