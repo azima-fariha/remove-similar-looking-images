@@ -1,16 +1,16 @@
 # remove-similar-looking-images
 
-Q1. What did you learn after looking at our dataset? <br />
+###Q1. What did you learn after looking at our dataset? <br />
 The dataset comprises parking garage images captured by surveillance cameras, totaling 1080 images.
-Q2. How does your program work? <br />
+###Q2. How does your program work? <br />
 Step 1: The program examines the available file extensions within the dataset. It helps us to know what kind of dataset we are dealing with.
 
 Step 2: It determines the total number of images present in the dataset.
 
 Step 3: The program identifies and eliminates any none or empty image files, if they exist, from the dataset.
 
-	None type image - When loading or accessing an image that doesn't exist or cannot be read properly, the image variable may be assigned the value "None" to indicate the absence of valid image data. 
-	Empty image - An "empty" image refers to an image object that exists but contains no meaningful data or has dimensions of zero.
+None type image - When loading or accessing an image that doesn't exist or cannot be read properly, the image variable may be assigned the value "None" to indicate the absence of valid image data. 
+Empty image - An "empty" image refers to an image object that exists but contains no meaningful data or has dimensions of zero.
 
 Step 4: After the removal process, it reevaluates the number of images remaining in the dataset.
 
@@ -26,7 +26,7 @@ This process continues for each subsequent image in the dataset, comparing it wi
 
 Step 7: Upon completion of the similarity-looking images removal process, the program displays the number of remaining images in the dataset.
 
-Q3. What values did you decide to use for input parameters and how did you find these values?
+###Q3. What values did you decide to use for input parameters and how did you find these values?<br />
 
 For my remove_similar_images function, I opted to utilize the following input parameters:
 
