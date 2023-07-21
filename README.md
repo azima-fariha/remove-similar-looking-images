@@ -1,8 +1,8 @@
 # remove-similar-looking-images
 
-###Q1. What did you learn after looking at our dataset? <br />
+### Q1. What did you learn after looking at our dataset? <br />
 The dataset comprises parking garage images captured by surveillance cameras, totaling 1080 images.
-###Q2. How does your program work? <br />
+### Q2. How does your program work? <br />
 Step 1: The program examines the available file extensions within the dataset. It helps us to know what kind of dataset we are dealing with.
 
 Step 2: It determines the total number of images present in the dataset.
@@ -26,7 +26,7 @@ This process continues for each subsequent image in the dataset, comparing it wi
 
 Step 7: Upon completion of the similarity-looking images removal process, the program displays the number of remaining images in the dataset.
 
-###Q3. What values did you decide to use for input parameters and how did you find these values?<br />
+### Q3. What values did you decide to use for input parameters and how did you find these values?<br />
 
 For my remove_similar_images function, I opted to utilize the following input parameters:
 
