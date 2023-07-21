@@ -98,7 +98,7 @@ The effectiveness of the solution heavily relies on the specific use case and th
 
 To address these concerns, it becomes essential to carefully determine the appropriate values for `similarity_threshold` and `min_contour_area`. This thoughtful selection ensures that the removal process strikes the right balance between eliminating redundant data and retaining valuable images for accurate and reliable model training.
 
-***Note: Running the `solution.py`` file in the terminal with a 16GB RAM took me around 9 minutes.***
+***Note: Running the `solution.py` file in the terminal with a 16GB RAM took me around 9 minutes.***
 
 
 
