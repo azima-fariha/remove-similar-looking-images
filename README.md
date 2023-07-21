@@ -1,8 +1,8 @@
 # remove-similar-looking-images
 
-Q1. What did you learn after looking at our dataset?
+Q1. What did you learn after looking at our dataset? <br />
 The dataset comprises parking garage images captured by surveillance cameras, totaling 1080 images.
-Q2. How does your program work?
+Q2. How does your program work? <br />
 Step 1: The program examines the available file extensions within the dataset. It helps us to know what kind of dataset we are dealing with.
 
 Step 2: It determines the total number of images present in the dataset.
