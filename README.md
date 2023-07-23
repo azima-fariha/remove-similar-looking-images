@@ -87,7 +87,7 @@ This iterative process involved experimenting with various images to determine s
 
 ## Q4. What would you suggest to implement to improve data collection of unique cases in the future?
 
-1. **Regular Data Cleanup:** Perform regular data cleanup by running algorithms to detect and remove duplicated or highly similar images or data points. This helps maintain a clean and relevant dataset.
+1. **Regular Data Cleanup:** Perform regular data cleanup by running algorithms to detect and remove duplicated or highly similar images. This helps maintain a clean and relevant dataset.
 2. **Timestamp Tracking:** Given the high influx of images from surveillance cameras, it's crucial to manage highly similar images while preserving their respective timestamps. Organizing the dataset based on timestamps facilitates easy access and retrieval of specific records.
 3. **Quality Control:** Maintaining dataset quality is paramount. To achieve this, perform error analyses and generate periodic reports to monitor data integrity and identify any anomalies or mishandlings.
 
